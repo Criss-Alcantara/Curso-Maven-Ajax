@@ -32,7 +32,7 @@ public class CRUD {
 		else if(caracteristica == "genero") usuario.genero = newValor.charAt(0);
 	}
 	
-	public void Delete(Usuario usuario) {
+	/*public void Delete(Usuario usuario) {
 	
-	}
+	}*/
 }
