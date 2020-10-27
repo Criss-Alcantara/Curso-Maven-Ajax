@@ -20,7 +20,6 @@ public class Animal {
 		this.edad = edad;
 	}
 	
-	
 	/*Setters*/
 	public void setNombre(String newNombre) {
 		nombre = newNombre;

@@ -1,5 +1,7 @@
 package com.adalid;
 
+import java.util.ArrayList;
+
 public class CRUD {
 
 	public void Create(Usuario usuario, String nombre, String dni, String telefono, int edad, Float salario, Boolean estado, char genero ) {
@@ -31,7 +33,7 @@ public class CRUD {
 		else if(caracteristica == "estado") usuario.estado = Boolean.parseBoolean(newValor);
 		else if(caracteristica == "genero") usuario.genero = newValor.charAt(0);
 	}
-	
+
 	/*public void Delete(Usuario usuario) {
 	
 	}*/

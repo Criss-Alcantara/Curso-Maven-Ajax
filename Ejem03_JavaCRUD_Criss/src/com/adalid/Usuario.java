@@ -3,7 +3,6 @@ package com.adalid;
 public class Usuario {
 	
 	static int totalUsuarios;
-	
 	String nombre;
 	String dni;
 	String telefono;
@@ -12,7 +11,7 @@ public class Usuario {
 	boolean estado;
 	char genero;	
 	
-	Usuario(String nombre, String dni, String telefono, int edad, Float salario, Boolean estado, char genero) {
+	Usuario(String nombre, String dni, String telefono, int edad, float salario, Boolean estado, char genero) {
 		this.nombre = nombre;
 		this.dni = dni;
 		this.telefono = telefono;
@@ -47,15 +46,15 @@ public class Usuario {
 
 	void aumentarSalario(float cantidad) {
 		this.salario += cantidad;
-		System.out.println("Ha aumentado el salario en " + cantidad + " hasta los " + this.salario + " €");
+		System.out.println("Ha aumentado el salario en " + cantidad + " hasta los " + this.salario + " ï¿½");
 	}
 	
 	void cambioGenero(String genero) {
 		genero = genero.toLowerCase();
-		if(genero == "mujer") {
+		if("mujer".equals(genero)) {
 			this.genero = 'H';
 		}
-		else if(genero == "hombre") {
+		else if("hombre".equals(genero)) {
 			this.genero = 'M';
 		}
 	}
@@ -66,7 +65,7 @@ public class Usuario {
 				+ "\n - Telefono: " + this.telefono
 				+ "\n - Edad: " + this.edad
 				+ "\n -	Salario: " + this.salario
-				+ "\n - Estado: " + this.estado
+				+ "\n - Estado: " + (this.estado ? "activo" : "inactivo")
 				+ "\n - genero: " + this.genero);
 	}
 	
@@ -81,6 +80,6 @@ public class Usuario {
 		if (nuevoDNI.length() > 3 && nuevoDNI.length() < 10)
 			usuCualsea.dni = nuevoDNI;
 		else
-			System.out.println("El DNI " +  nuevoDNI + " en inválido");
+			System.out.println("El DNI " +  nuevoDNI + " en invï¿½lido");
 	}
 }

@@ -26,17 +26,17 @@ public class InicializarAnimales {
 		
 		/* METODO SOBRE EDAD */
 		if(anim1.edadMayor_5()) {
-			System.out.println(anim1.getNombre() + " tiene mas de 5 años");
+			System.out.println(anim1.getNombre() + " tiene mas de 5 years");
 		}
 		else {
-			System.out.println(anim1.getNombre() + " tiene menos de 5 años");
+			System.out.println(anim1.getNombre() + " tiene menos de 5 years");
 		}
 		
 		if(anim2.edadMayor_5()) {
-			System.out.println(anim2.getNombre() + " tiene mas de 5 años");
+			System.out.println(anim2.getNombre() + " tiene mas de 5 years");
 		}
 		else {
-			System.out.println(anim1.getNombre() + " tiene mas de 5 años");
+			System.out.println(anim1.getNombre() + " tiene mas de 5 aï¿½os");
 		}
 		
 		/* METODO SOBRE PESO */
