@@ -1,17 +1,17 @@
-package com.adalid;
+package com.adalid.modelo;
 
 public class Usuario {
 	
-	static int totalUsuarios;
-	String nombre;
-	String dni;
-	String telefono;
-	int edad;
-	float salario;
-	boolean estado;
-	char genero;	
+	public static int totalUsuarios;
+	public String nombre;
+	public String dni;
+	public String telefono;
+	public int edad;
+	public float salario;
+	public boolean estado;
+	public char genero;	
 	
-	Usuario(String nombre, String dni, String telefono, int edad, float salario, Boolean estado, char genero) {
+	public Usuario(String nombre, String dni, String telefono, int edad, float salario, Boolean estado, char genero) {
 		this.nombre = nombre;
 		this.dni = dni;
 		this.telefono = telefono;
@@ -22,7 +22,7 @@ public class Usuario {
 		totalUsuarios = totalUsuarios + 1;
 	}
 	
-	Usuario(String nombre, String dni, int edad, char sexo) {
+	public Usuario(String nombre, String dni, int edad, char sexo) {
 		this.nombre = nombre;
 		this.dni = dni;
 		this.edad = edad;
@@ -30,26 +30,26 @@ public class Usuario {
 		totalUsuarios = totalUsuarios + 1;
 	}
 
-	Usuario() {	
+	public Usuario() {	
 		totalUsuarios++;	
 	}
 	
-	boolean mayorEdad() {
+	public boolean mayorEdad() {
 		return this.edad >= 18;
 	}
 	
-	void mostrarDatos() {
+	public void mostrarDatos() {
 		System.out.println("DNI: " + this.dni
 				+ "\n - " + this.nombre
 				+ "\n - Edad: " + this.edad);
 	}
 
-	void aumentarSalario(float cantidad) {
+	public void aumentarSalario(float cantidad) {
 		this.salario += cantidad;
 		System.out.println("Ha aumentado el salario en " + cantidad + " hasta los " + this.salario + " �");
 	}
 	
-	void cambioGenero(String genero) {
+	public void cambioGenero(String genero) {
 		genero = genero.toLowerCase();
 		if("mujer".equals(genero)) {
 			this.genero = 'H';
@@ -59,7 +59,7 @@ public class Usuario {
 		}
 	}
 
-	void mostrarTodosDatos() {
+	public void mostrarTodosDatos() {
 		System.out.println("Nombre: " + this.nombre
 				+ "\n - DNI: " + this.dni
 				+ "\n - Telefono: " + this.telefono
@@ -69,14 +69,14 @@ public class Usuario {
 				+ "\n - genero: " + this.genero);
 	}
 	
-	float salarioNeto(float irpf, float ss) {
+	public float salarioNeto(float irpf, float ss) {
 		float impIRPF = this.salario * irpf / 100f;
 		float impSS = this.salario * ss / 100f;
 		float neto = this.salario - impIRPF - impSS;
 		return neto;
 	}
 	
-	static void cambiarDNI(Usuario usuCualsea, String nuevoDNI) {
+	public static void cambiarDNI(Usuario usuCualsea, String nuevoDNI) {
 		if (nuevoDNI.length() > 3 && nuevoDNI.length() < 10)
 			usuCualsea.dni = nuevoDNI;
 		else

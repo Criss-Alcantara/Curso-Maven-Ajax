@@ -1,22 +1,24 @@
-package com.adalid;
+package com.adalid.ejercicios;
+
+import com.adalid.modelo.Usuario;
 
 public class EjemploUsuarios {
 
-	// Métodos estáticos pertenecen a la clase, 
-	// pero NO pertencen a ningún objeto en concreto
+	// Mï¿½todos estï¿½ticos pertenecen a la clase, 
+	// pero NO pertencen a ningï¿½n objeto en concreto
 	public static void crearYMostrarUsusarios() {
 
-		// Declaramos una variable vacía
+		// Declaramos una variable vacï¿½a
 		Usuario usu1 = null; // COn el el valor null por defecto
 		// Los objetos (instancias) son reservas de memoria con una estructura dada
 		usu1 = new Usuario();
 		// Las variables de tipo objeto, en el fondo son referencias, punteros,
-		// es decir, una dirección de memoria a ese espacio reservado
+		// es decir, una direcciï¿½n de memoria a ese espacio reservado
 		usu1.dni = "34343434-L";
 		usu1.nombre = "Fulanito";
 		usu1.estado = true;
 		usu1.edad = 20;
-		usu1.genero = 'H'; // 1 carácter
+		usu1.genero = 'H'; // 1 carï¿½cter
 		usu1.salario = 950.25f; // float
 		usu1.telefono = "91-555 02 55";
 
@@ -41,9 +43,7 @@ public class EjemploUsuarios {
 		} else {
 			System.out.println("Usu 2 " + usu2.nombre + " es menor");			
 		}
-		if (usu2.nombre == new Integer( 55).toString()) {
-			
-		}
+
 		usu2.mostrarDatos();
 		usu1.aumentarSalario(500.25f);
 		usu2.aumentarSalario(1900.99f);
@@ -57,14 +57,14 @@ public class EjemploUsuarios {
 		int edadExtra = 300 / 50 - 20;
 		usu2.edad = edadUsu + edadExtra;
 		System.out.println("Edad usu2: " + usu2.edad);
-		System.out.println("Neto usu2: " + usu2.salarioNeto(15, 7) + " €");
+		System.out.println("Neto usu2: " + usu2.salarioNeto(15, 7) + " ï¿½");
 		
 		Usuario usu3 = new Usuario("Ana", "1111-X", 30, 'M' );
 		usu3.estado = true;
 		
 		usu3.mostrarDatos();
 		// Usuario.mostrarDatos(); Error
-		// Las llamadas a los métodos tb invocaciones
+		// Las llamadas a los mï¿½todos tb invocaciones
 		Usuario.cambiarDNI(usu2, "343434-L");
 		System.out.println("nuevo DNI usu2: " + usu2.dni);
 		System.out.println("Total usuarios: " + Usuario.totalUsuarios);

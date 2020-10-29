@@ -1,4 +1,4 @@
-package com.adalid;
+package com.adalid.modelo;
 import java.util.ArrayList;
 
 public class CRUD_2 {

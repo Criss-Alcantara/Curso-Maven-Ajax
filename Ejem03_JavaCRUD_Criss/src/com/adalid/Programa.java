@@ -1,5 +1,7 @@
 package com.adalid;
 
+import com.adalid.modelo.CRUD_2;
+
 /*
  * Operaciones C.R.U.D.:
  * Create, Read, Update y Delete sobre una entidad: 

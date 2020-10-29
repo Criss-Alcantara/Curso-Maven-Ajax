@@ -1,4 +1,4 @@
-package com.adalid;
+package com.adalid.ejercicios;
 
 public class InicializarAnimales {
 

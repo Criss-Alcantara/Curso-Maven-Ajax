@@ -1,6 +1,8 @@
-package com.adalid;
+package com.adalid.ejercicios;
 
 import java.util.ArrayList;
+
+import com.adalid.modelo.Usuario;
 
 public class CRUD {
 
@@ -25,13 +27,13 @@ public class CRUD {
 	}
 	
 	public void Update(Usuario usuario, String caracteristica, String newValor) {
-		if(caracteristica == "nombre") usuario.nombre = newValor;
-		else if(caracteristica == "dni") usuario.dni = newValor;
-		else if(caracteristica == "telefono") usuario.dni = newValor;
-		else if(caracteristica == "edad") usuario.edad = Integer.parseInt(newValor);
-		else if(caracteristica == "salario") usuario.salario = Integer.parseInt(newValor);
-		else if(caracteristica == "estado") usuario.estado = Boolean.parseBoolean(newValor);
-		else if(caracteristica == "genero") usuario.genero = newValor.charAt(0);
+		if(caracteristica.equals("nombre")) usuario.nombre = newValor;
+		else if(caracteristica.equals("dni")) usuario.dni = newValor;
+		else if(caracteristica.equals("telefono")) usuario.dni = newValor;
+		else if(caracteristica.equals("edad")) usuario.edad = Integer.parseInt(newValor);
+		else if(caracteristica.equals("salario")) usuario.salario = Integer.parseInt(newValor);
+		else if(caracteristica.equals("estado")) usuario.estado = Boolean.parseBoolean(newValor);
+		else if(caracteristica.equals("genero")) usuario.genero = newValor.charAt(0);
 	}
 
 	/*public void Delete(Usuario usuario) {
