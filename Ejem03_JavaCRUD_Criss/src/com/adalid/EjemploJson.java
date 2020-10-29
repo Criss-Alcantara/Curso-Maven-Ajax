@@ -10,7 +10,7 @@ public class EjemploJson {
 
   public static void cargarUsuarios(){
       Usuario[] listaCargada;
-      String json;
+      String json = "";
 
       try {
         File myObj = new File("src/datos.json");
@@ -18,6 +18,7 @@ public class EjemploJson {
         while (myReader.hasNextLine()) {
           String data = myReader.nextLine();
           System.out.println(data);
+          json += data;
         }
         myReader.close();
       } catch (FileNotFoundException e) {
@@ -26,6 +27,9 @@ public class EjemploJson {
       }
 
       listaCargada = new Json().fromJson(json, Usuario[].class); 
+      for(Usuario usuario : listaCargada) {
+    	  usuario.
+      }
       
   }
 }
