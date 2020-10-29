@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <h1>CALLBACK</h1>
+    <script>
+        function suma(x, y) {
+            return x + y;
+        }
+
+        var restar = function(x, y) {
+            return x - y;
+        }
+
+        var multiplicar = new Function("x", "y", "{return x * y;}")
+
+        var dividir = new Function("x", "y", "{return ((x / y).toFixed(2));}")
+
+        var resto = new Function("x", "y", "{return x % y;}")
+
+        document.write("<br>Sumar 5 + 3 = " + suma(5, 3));
+        document.write("<br>Restar 5 - 3 = " + restar(5, 3));
+        document.write("<br>Multiplicar 5 * 3 = " + multiplicar(5, 3));
+
+        function sumarArray(arr1, arr2) {
+            let resultado = new Array();
+            for (let i = 0; i < arr1.length; i++) {
+                resultado[i] = arr1[i] + arr2[i];
+            }
+            return resultado;
+        }
+
+        function operarArray(arr1, arr2, funcionCallback) {
+            let resultado = new Array();
+            for (let i = 0; i < arr1.length; i++) {
+                resultado[i] = funcionCallback(arr1[i], arr2[i]);
+            }
+            return resultado;
+        }
+
+        let array_a = [13, 4, 9];
+        let array_b = [7, 8, 9];
+        document.write("<br>Array Suma: " + sumarArray(array_a, array_b));
+        document.write("<br>Array Resta: " + operarArray(array_a, array_b, restar));
+        document.write("<br>Array Mult: " + operarArray(array_a, array_b, multiplicar));
+
+        //Ejercicio Añadir Callbacks de dividir y Resto
+
+        document.write("<br>Array Div: " + operarArray(array_a, array_b, dividir));
+        document.write("<br>Array Resto: " + operarArray(array_a, array_b, resto));
+    </script>
+</body>
+
+</html>

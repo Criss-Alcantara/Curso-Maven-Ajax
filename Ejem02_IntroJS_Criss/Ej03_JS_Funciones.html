@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones y arrays</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Manera típica de declarar e implementar (crear) una función es así:
+        function generarTitulo() {
+            document.write("<h1>Título generado con JS</h1>");
+        }
+        generarTitulo();
+
+        function generarParrafos(texto, numVeces) {
+            if (typeof numVeces === "number") {
+                for (var i = 0; i < numVeces; i++) {
+                    document.write("<p>Parrafo: " + texto + " , " + i + "</p>");
+                }
+            } else {
+                console.error(numVeces + " no es núm.");
+            }
+        }
+        // Llamadas válidas
+        generarParrafos("texto tipo texto", 3);
+        //generarParrafos(true, 2);
+        //generarParrafos(444, 2);
+
+        //generarParrafos("Euueee!", "ueeee!");
+
+        /* Dos funciones una (todasLasCabeceras(),que
+        	muestre todas las cabeceras de H1 al H6) y otra que 
+        	muestre las cabeceras que se pasen por párametro*/
+        function todasLasCabeceras() {
+            var texto = "TODAS LAS CABECERAS";
+            for (var i = 0; i < 6; i++) {
+                document.write("<h" + (i + 1) + ">" + texto + "</h>");
+            }
+        }
+
+        function parametroCabeceras(numVeces) {
+            if (typeof numVeces === "number") {
+                var texto = "ALGUNAS CABECERAS";
+                for (var i = 0; i < numVeces; i++) {
+                    document.write("<h" + (i + 1) + ">" + texto + "</h>");
+                }
+            } else {
+                console.error(numVeces + " no es núm.");
+            }
+        }
+
+        todasLasCabeceras();
+        var numVeces = parseInt(prompt("Ingrese la cantidad de cabeceras deseadas 1-6"));
+        parametroCabeceras(numVeces);
+    </script>
+</body>
+
+</html>

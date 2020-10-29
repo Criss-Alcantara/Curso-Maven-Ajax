@@ -1,53 +1,56 @@
 <html>
-<head>
-<title>Mi web de JavaScript</title>
-</head>
-<body>
-	<h1>El cuerpo de la pagina</h1>
-	
-	<script>
-		// La primera gran diferencia JS vs JAva
-		// Java es Semicompilado: Convierte los fuentes 
-		// en un código para la JVM similar al código máquina/ensablador
-		// Mientras que JS no se compila, si no que es el Navegador el que 
-		// renderiza la web: COnvierte el HTML en una estructura visualizable 
-		// Y JS sólo lo intrepeta: Lee una línea, la traduce a 0101, según lo va ejecutando
-		// La primera instrucción que haya es el "main()" de JS
-		// Aquí la filosofía es ejecutar cuanto antes: 
-		// Es muy flexible
-		// Es de tipado débil y dinámico
-		// Signica que las variables pueden cambiar de TIPO
 
-		alert("Hola soy tu conciencia" + 40);
-		// Variables
-		var nnum = 600;
-		var texto = "hola de nevo";
-		document.write("Mira tú, " + texto);
-		// Tipado dinámico: podemos cambiar de tipo una variable
-		texto = 3.1416; // Es tipo Number, no hay diferencia entre enteros o decimales 
-		// Tipado débil: porque hace converiones como buenamente puede
-		if (texto == "3.1416") {
-			document.write("Anda, ¿es lo mismo un texto que un número?");
-		}
-		// Los operadores la mayoría son los mismos que el resto de lenguajes: + * % -  ||   && < > <=
-		// Pero los de comparación y algunos del resto, por el tipado débil, difieren de el resto de lenguajes
-		// Hay un operador idéntico  ===
-		if (texto === "3.1416") {
-			document.write("Anda, no se va a mostrar");
-		} else {
-			document.write("Porque el === compara también los tipos de datos");
-		}
-		// Los bucles, funcionan igual:
-		var i = 5;
-		while (i > 0) {
-			document.write("<br>Repetición " + i);
-			i--;
-		}
-		// Este también se comparte con Java
-		// El bucle for ES UN BUCLE while pero preparado para hacer incrementos o decrementos
-		for (i = 5; i > 0; i--) {
-			document.write("<br>Repetición " + i);
-		}
-	</script>
+<head>
+    <title>Mi web de JavaScript</title>
+</head>
+
+<body>
+    <h1>El cuerpo de la pagina</h1>
+
+    <script>
+        // La primera gran diferencia JS vs JAva
+        // Java es Semicompilado: Convierte los fuentes 
+        // en un cÃ³digo para la JVM similar al cÃ³digo mÃ¡quina/ensablador
+        // Mientras que JS no se compila, si no que es el Navegador el que 
+        // renderiza la web: COnvierte el HTML en una estructura visualizable 
+        // Y JS sÃ³lo lo intrepeta: Lee una lÃ­nea, la traduce a 0101, segÃºn lo va ejecutando
+        // La primera instrucciÃ³n que haya es el "main()" de JS
+        // AquÃ­ la filosofÃ­a es ejecutar cuanto antes: 
+        // Es muy flexible
+        // Es de tipado dÃ©bil y dinÃ¡mico
+        // Signica que las variables pueden cambiar de TIPO
+
+        alert("Hola soy tu conciencia" + 40);
+        // Variables
+        var nnum = 600;
+        var texto = "hola de nevo";
+        document.write("Mira tÃº, " + texto);
+        // Tipado dinÃ¡mico: podemos cambiar de tipo una variable
+        texto = 3.1416; // Es tipo Number, no hay diferencia entre enteros o decimales 
+        // Tipado dÃ©bil: porque hace converiones como buenamente puede
+        if (texto == "3.1416") {
+            document.write("Anda, Â¿es lo mismo un texto que un nÃºmero?");
+        }
+        // Los operadores la mayorÃ­a son los mismos que el resto de lenguajes: + * % -  ||   && < > <=
+        // Pero los de comparaciÃ³n y algunos del resto, por el tipado dÃ©bil, difieren de el resto de lenguajes
+        // Hay un operador idÃ©ntico  ===
+        if (texto === "3.1416") {
+            document.write("Anda, no se va a mostrar");
+        } else {
+            document.write("Porque el === compara tambiÃ©n los tipos de datos");
+        }
+        // Los bucles, funcionan igual:
+        var i = 5;
+        while (i > 0) {
+            document.write("<br>RepeticiÃ³n " + i);
+            i--;
+        }
+        // Este tambiÃ©n se comparte con Java
+        // El bucle for ES UN BUCLE while pero preparado para hacer incrementos o decrementos
+        for (i = 5; i > 0; i--) {
+            document.write("<br>RepeticiÃ³n " + i);
+        }
+    </script>
 </body>
+
 </html>

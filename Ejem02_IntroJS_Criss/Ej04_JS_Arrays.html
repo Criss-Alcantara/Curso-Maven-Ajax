@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>ARRAYS</h1>
+    <hr/>
+    <input id="input-fruta" type="text" placeholder="Introduzca una fruta" size="40">
+    <input id="button-new" type="button" value="Añadir">
+    <hr/>
+    <ul id="ul-frutas">
+        <li>Fresa</li>
+    </ul>
+    <script>
+        let frutas = new Array();
+
+        frutas[0] = "Manzana"
+        frutas[1] = "Pera"
+        frutas.push("Melon");
+        frutas.push("Sandia");
+        let ulFrutas = document.getElementById("ul-frutas");
+
+        mostrarFrutas();
+
+        function mostrarFrutas() {
+            for (let i = 0; i < frutas.length; i++) {
+                ulFrutas.innerHTML += "<li>" + frutas[i] + "</li>";
+            }
+        }
+
+        function clickNuevaFruta() {
+            let inputFruta = document.getElementById("input-fruta");
+            let textoFruta = inputFruta.value;
+            frutas.push(textoFruta);
+            ulFrutas.innerHTML += "<li>" + frutas[frutas.length - 1] + "</li>";
+        }
+
+        document.getElementById("button-new").onclick = clickNuevaFruta;
+    </script>
+</body>
+
+</html>
