@@ -1,5 +1,6 @@
 package com.adalid;
 
+import com.adalid.CSV.EjemploCSV;
 import com.adalid.modelo.CRUD_2;
 
 /*
@@ -11,11 +12,18 @@ public class Programa {
 
 	public static void main(String[] args) {
 		// Invocamos a un m�todo est�tico, poniendo la clase . metodo()
+		
 		//EjemploUsuarios.crearYMostrarUsusarios();
+		
 		//InicializarAnimales.crearYMostrarAnimales();
-		float aux = 0;
+		
+		/*float aux = 0;
 		CRUD_2 gesUsu = new CRUD_2();
-		gesUsu.Create("Criss", "51487168N", "631885098", 24, aux , true, 'M');
+		gesUsu.Create("Criss", "51487168N", "631885098", 24, aux , true, 'M');*/
+		
+		//EjemploJson.cargarUsuarios();
+		
+		EjemploCSV.cargarUsuarios();
 
 	}
 }

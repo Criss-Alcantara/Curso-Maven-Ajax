@@ -1,4 +1,4 @@
-package com.adalid;
+package com.adalid.CSV;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,7 +12,7 @@ public class EjemploCSV {
 
 	public static void cargarUsuarios(){
 		try {
-			CSVReader csvReader = new CSVReader(new FileReader("src/com/adalid/datos.csv"));
+			CSVReader csvReader = new CSVReader(new FileReader("src/com/adalid/CSV/datos.csv"));
 			String[] listData;
 			CRUD_2 gesUsu = new CRUD_2();
 			

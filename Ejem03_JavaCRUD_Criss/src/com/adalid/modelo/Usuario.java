@@ -60,11 +60,11 @@ public class Usuario {
 	}
 
 	public void mostrarTodosDatos() {
-		System.out.println("Nombre: " + this.nombre
+		System.out.println("\n Nombre: " + this.nombre
 				+ "\n - DNI: " + this.dni
 				+ "\n - Telefono: " + this.telefono
 				+ "\n - Edad: " + this.edad
-				+ "\n -	Salario: " + this.salario
+				+ "\n - Salario: " + this.salario
 				+ "\n - Estado: " + (this.estado ? "activo" : "inactivo")
 				+ "\n - genero: " + this.genero);
 	}
