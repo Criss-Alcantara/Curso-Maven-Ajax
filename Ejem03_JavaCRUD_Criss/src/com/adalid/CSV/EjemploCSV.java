@@ -15,13 +15,20 @@ public class EjemploCSV {
 			CSVReader csvReader = new CSVReader(new FileReader("src/com/adalid/CSV/datos.csv"));
 			String[] listData;
 			CRUD_2 gesUsu = new CRUD_2();
+			Boolean encabezado = true;
 			
 			try {
 				while((listData = csvReader.readNext()) != null) {
-					for(String cell : listData) {
-						String[] csv = cell.split(",");
-						gesUsu.Create(csv[0],csv[1],csv[2],Integer.parseInt(csv[3]),Float.parseFloat(csv[4]),
-								Boolean.parseBoolean(csv[5]),csv[6].charAt(0));
+					if(encabezado == true) {
+						encabezado = false;
+						continue;
+					}
+					else {
+						for(String cell : listData) {
+							String[] csv = cell.split(",");
+							gesUsu.Create(csv[0],csv[1],csv[2],Integer.parseInt(csv[3]),Float.parseFloat(csv[4]),
+									Boolean.parseBoolean(csv[5]),csv[6].charAt(0));
+						}
 					}
 				}
 				gesUsu.Read();
