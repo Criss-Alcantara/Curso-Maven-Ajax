@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let mueble = new Object(); // Se coje el object basico y se clona/duplica, y se asigna a nuestra variable
+        mueble.modelo = "STRUPTUPISH";
+        mueble.peso = "50Kg";
+        mueble.dimensiones = new Object();
+        mueble.dimensiones.longitud = 50;
+        mueble.dimensiones.ancho = 200;
+        mueble.dimensiones.alto = 150;
+        document.write("<br>Modelo mueble: " + mueble.modelo);
+        document.write("<br>Long mueble: " + mueble.dimensiones.longitud);
+        document.write("<br>Peso mueble: " + mueble["peso"]);
+
+        /*let magnitud = prompt("Que magnitud?");
+        document.write("<br> " + magnitud + " = " + mueble["dimensiones"][magnitud]);*/
+
+        function Coche(marca, modelo, potencia) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.potencia = potencia;
+            if (potencia > 500) {
+                this.competicion = true;
+            }
+            this.encender = function() {
+                document.write("<br>Rrrrrun rrrrun");
+            }
+        }
+        Coche.prototype.apagar = function() {
+                document.write("<br>Off Choff");
+            }
+            //Instanciamos objetos asi
+        let miCoche = new Coche("Kia", "Sportage", "140vc");
+        let tuCoche = new Coche("Audi", "A3", "140vc");
+
+        miCoche.encender();
+        tuCoche.encender();
+        miCoche.apagar();
+        tuCoche.apagar();
+
+        //JSON: JavaScript Object Notation
+        let pc = {
+            "marca": "Asus",
+            "modelo": "Strix",
+            "RAM": 32,
+            "VT": true,
+            "dimensiones": {
+                "long": 40,
+                "ancho": 60,
+                "alto": 5
+            },
+            "perifericos": new Array("Raton", "Camara", "Teclado"),
+            "teclas": ['Q', 'W', 'E', 'R', 'T', 'Y'],
+            encender: function() { //Parecido a los metodos Java
+                alert(this.modelo + " se ha encendido");
+            }
+        }
+
+        document.write("<br>Modelo PC: " + pc.modelo);
+        document.write("<br>Modelo RAM: " + pc["RAM"]);
+        document.write("<br>Dimensiones PC: " + pc["dimensiones"]["long"]);
+        document.write("<br>Periferico 1 : " + pc["perifericos"][0]);
+        document.write("<br>Teclas 1 : " + pc.teclas[0]);
+        pc.encender();
+    </script>
+</body>
+
+</html>

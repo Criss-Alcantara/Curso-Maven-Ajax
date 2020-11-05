@@ -9,7 +9,32 @@
 
 <body>
     <h1>CALLBACK</h1>
+    <div id="un-div">
+        Parte del DIV
+        <p id="un-parrafo">Contenido de parrafo</p>
+    </div>
     <script>
+        let parrafo;
+        let div;
+        //Funcion callback que el navegador invocara cvuando se cargue la pagina
+        function inicializarWeb() {
+            parrafo = document.getElementById("un-parrafo");
+            div = document.getElementById("un-div");
+            //Funcion callback que el moto de JS/navegador llamara cuando el usuario haga click sobre el objeto
+            parrafo.onclick = function() {
+                div.innerHTML += "<br>Click en parrafo";
+                //alert("parrafo");
+            }
+            div.onclick = function() {
+                div.innerHTML += "<br>Click en div";
+                //alert("div");
+            }
+        }
+
+        window.onload = inicializarWeb;
+        //inicializarWeb();
+
+        /*Funciones Callback*/
         function suma(x, y) {
             return x + y;
         }
@@ -18,16 +43,17 @@
             return x - y;
         }
 
+        //Funciones solo line
         var multiplicar = new Function("x", "y", "{return x * y;}")
-
         var dividir = new Function("x", "y", "{return ((x / y).toFixed(2));}")
-
         var resto = new Function("x", "y", "{return x % y;}")
+
 
         document.write("<br>Sumar 5 + 3 = " + suma(5, 3));
         document.write("<br>Restar 5 - 3 = " + restar(5, 3));
         document.write("<br>Multiplicar 5 * 3 = " + multiplicar(5, 3));
 
+        //Funciones con array
         function sumarArray(arr1, arr2) {
             let resultado = new Array();
             for (let i = 0; i < arr1.length; i++) {
@@ -36,6 +62,13 @@
             return resultado;
         }
 
+        //Documentacion Doxygen
+        /** Funcion para oeprar sobre arrays
+         * @param array1 Primer array
+         * @param array2 Segundo array
+         * @param funcionCallback Funcion asi funcionCallback(Number, Number) {}
+         * @return Array resultado
+         */
         function operarArray(arr1, arr2, funcionCallback) {
             let resultado = new Array();
             for (let i = 0; i < arr1.length; i++) {
@@ -46,12 +79,12 @@
 
         let array_a = [13, 4, 9];
         let array_b = [7, 8, 9];
+
         document.write("<br>Array Suma: " + sumarArray(array_a, array_b));
+
+        //CallBacks
         document.write("<br>Array Resta: " + operarArray(array_a, array_b, restar));
         document.write("<br>Array Mult: " + operarArray(array_a, array_b, multiplicar));
-
-        //Ejercicio Añadir Callbacks de dividir y Resto
-
         document.write("<br>Array Div: " + operarArray(array_a, array_b, dividir));
         document.write("<br>Array Resto: " + operarArray(array_a, array_b, resto));
     </script>
