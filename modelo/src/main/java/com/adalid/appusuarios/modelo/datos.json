@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "Luis",
+        "edad:": 30,
+        "estado": true
+    },
+    {
+        "nombre": "Ana",
+        "edad:": 33,
+        "estado": true,
+        "dni": null,
+        "direcciones": ["C/Pez 20", "C/Luz 44"] 
+    }
+]
